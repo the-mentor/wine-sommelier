@@ -29,6 +29,9 @@ if [ "$ENABLE_ESYNC" = "true" ]; then
   export WINEESYNC=1 
 fi
 
+#Fix/Workaround for Vulkan Nvidia proprietary driver issue.
+export VK_ICD_FILENAMES=/var/lib/snapd/lib/vulkan/icd.d/nvidia_icd.json:$SNAP/usr/share/vulkan/icd.d/intel_icd.x86_64.json:$SNAP/usr/share/vulkan/icd.d/radeon_icd.x86_64.json
+
 # https://stackoverflow.com/questions/4023830/how-to-compare-two-strings-in-dot-separated-version-format-in-bash
 vercomp() {
     if [[ $1 == $2 ]]
