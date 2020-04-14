@@ -44,23 +44,6 @@ apps:
       - screen-inhibit-control
       - wayland
       - x11
-  enable-dxvk:
-    command: bin/sommelier $SNAP/dxvk/setup_dxvk.sh install --without-dxgi
-    plugs:
-      - bluez
-      - desktop
-      - desktop-legacy
-      - hardware-observe
-      - home
-      - joystick
-      - network
-      - network-bind
-      - opengl
-      - process-control
-      - audio-playback
-      - screen-inhibit-control
-      - wayland
-      - x11
   wineboot:
     command: bin/sommelier $SNAP/bin/wineboot
     plugs:
